@@ -7,12 +7,32 @@
 	}
 
 	@media #{$desktop-only} {
+		position: relative;
 		z-index: 1;
 	}
 
 	&--text_lighter {
 		@media #{$desktop-only} {
 			color: #ffffff;
+		}
+	}
+}
+
+.navigation__item {
+	position: relative;
+
+	&::before {
+		content: "";
+		width: 100vw;
+		height: 1px;
+		background-color: #e6e6e6;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		box-shadow: 100vw 0 0 #e6e6e6;
+
+		@media #{$not-mobile} {
+			display: none;
 		}
 	}
 }
@@ -32,13 +52,14 @@
 		font-weight: 400;
 		font-size: 18px;
 		line-height: 24px;
-		padding: 18px 0 12px;
+		padding: 18px 0 8px;
 	}
 
 	@media #{$desktop-only} {
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 30px;
+		padding: 16px 0 5px;
 
 		&:hover {
 			opacity: 0.6;
@@ -49,20 +70,6 @@
 		}
 	}
 
-	&::before {
-		content: "";
-		width: 100vw;
-		height: 1px;
-		background-color: #e6e6e6;
-		position: absolute;
-		top: 0;
-		left: -19px;
-		box-shadow: 0 66px 0 0 #e6e6e6, 0 132px 0 0 #e6e6e6, 0 198px 0 0 #e6e6e6;
-
-		@media #{$not-mobile} {
-			display: none;
-		}
-	}
 
 	&[aria-current="page"] {
 		@media #{$not-mobile} {
@@ -80,6 +87,7 @@
 .navigation--closed .navigation__toggle::before {
 	content: "";
 	display: block;
+	margin-top: 6px;
 	width: 24px;
 	height: 24px;
 	mask: url("../../icons/stack.svg#burger") no-repeat center;
@@ -144,6 +152,8 @@
 
 .navigation--nojs .navigation__item {
 	display: block;
+	margin: 0;
+	padding: 0;
 }
 
 

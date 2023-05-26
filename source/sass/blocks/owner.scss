@@ -13,41 +13,19 @@
 .owner__title {
 	position: relative;
 	width: 204px;
-	margin: 24px -3px 34px;
+	margin: 0 -3px 34px;
 	background-color: #ffffff;
 
 
 	@media #{$not-mobile} {
 		width: 558px;
-		margin-top: 65px;
-		margin-bottom: 65px;
-
-		&::after {
-			content: "";
-			position: absolute;
-			display: block;
-			background-color: #ffffff;
-			width: 33px;
-			height: 40px;
-			left: -36px;
-			top: 0;
-		}
+		margin-top: 0;
+		margin-bottom: 76px;
 	}
 
 	@media #{$desktop-only} {
-		margin-top: 67px;
+		margin-top: 3px;
 		margin-bottom: 77px;
-
-		&::after {
-			content: "";
-			position: absolute;
-			display: block;
-			background-color: #ffffff;
-			width: 35px;
-			height: 40px;
-			left: -36px;
-			top: 0;
-		}
 	}
 
 	&::before {
@@ -58,11 +36,26 @@
 		width: 100vw;
 		height: 2px;
 		background-color: #68b738;
-		box-shadow: 100vw 0 0 #68b738, -100vw 0 0 #68b738;
+		box-shadow: 100vw 0 0 #68b738;
 		z-index: -1;
 
 		@media #{$not-mobile} {
 			top: 24px;
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		background-color: #ffffff;
+		width: 33px;
+		height: 40px;
+		left: -32px;
+		top: 0;
+
+		@media #{$not-mobile} {
+			left: -33px;
 		}
 	}
 }
@@ -70,7 +63,7 @@
 .owner__container {
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	gap: 15px;
 
 	@media #{$not-mobile} {
 		gap: 19px;
@@ -123,12 +116,12 @@
 	font-family: var(--accent-font);
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 1.5;
 	text-transform: uppercase;
 	border: 1px solid #e7e7e7;
 	min-height: 45px;
 	width: 100%;
-	padding: 14px 35px 14px 15px;
+	padding: 10px 35px 10px 15px;
 
 	@media #{$not-mobile} {
 		font-size: 20px;
@@ -146,7 +139,7 @@
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 18px;
+	line-height: 1.5;
 
 	@media #{$not-mobile} {
 		font-weight: 400;
@@ -164,7 +157,7 @@
 	border: 1px solid #e7e7e7;
 	min-height: 45px;
 	width: 100%;
-	padding: 14px 35px 14px 15px;
+	padding: 10px 35px 10px 15px;
 
 	@media #{$not-mobile} {
 		font-size: 20px;

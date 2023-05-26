@@ -27,12 +27,12 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 80px;
 		margin-top: 63px;
-		margin-bottom: 65px;
+		margin-bottom: 63px;
 	}
 }
 
 .form__cat-information {
-	margin: 39px 0 0;
+	margin: 38px 0 0;
 
 	@media #{$not-mobile} {
 		margin-top: 66px;
@@ -50,7 +50,7 @@
 
 	@media #{$not-mobile} {
 		margin-top: 48px;
-		margin-bottom: 71px;
+		margin-bottom: 79px;
 		margin-left: 2px;
 	}
 
@@ -89,7 +89,7 @@
 	margin: 20px 0 34px;
 
 	@media #{$not-mobile} {
-		margin: 15px 0 56px;
+		margin: 15px 0 54px;
 	}
 
 	@media #{$desktop-only} {
@@ -143,7 +143,7 @@
 		display: flex;
 		gap: 64px;
 		margin-left: 3px;
-		margin-bottom: 72px;
+		margin-bottom: 76px;
 	}
 
 	@media #{$desktop-only} {
